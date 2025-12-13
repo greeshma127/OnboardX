@@ -1,0 +1,53 @@
+#head{
+    font-family: "BBH Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  display: inline-block;
+  padding: 5px 8px;          /* gives breathing space */
+  line-height: 1.2;          /* prevents top/bottom cut */
+  overflow: visible;         /* ensures no clipping */
+  transition: transform 0.4s ease, letter-spacing 0.4s ease;
+  transform-origin: left center; /* grows to the right */
+}
+
+#head:hover {
+  transform: scale(1.1);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#header {
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  
+  /* Gradient */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#logout:hover,#save:hover{
+    transform: scale(1.1);
+}
+
+#head2{
+    font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
