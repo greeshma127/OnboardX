@@ -1,17 +1,20 @@
-#head{
-    font-family: "BBH Bartle", sans-serif;
+#headx{
+  font-family: "BBH Bartle", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
   display: inline-block;
-  padding: 5px 8px;          /* gives breathing space */
-  line-height: 1.2;          /* prevents top/bottom cut */
-  overflow: visible;         /* ensures no clipping */
+  padding: 5px 8px;          
+  line-height: 1.2;          
+  overflow: visible;        
   transition: transform 0.4s ease, letter-spacing 0.4s ease;
-  transform-origin: left center; /* grows to the right */
+  transform-origin: left center; 
+  margin: 0;
+  color: white;
+  margin: 0px;
 }
 
-#head:hover {
+#headx:hover {
   transform: scale(1.1);
   letter-spacing: 1px;
   cursor: pointer;
@@ -23,31 +26,177 @@
   display: flex;
   align-items: center;
   padding-left: 30px;
-  
-  /* Gradient */
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
 }
 
 @keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-#logout:hover,#save:hover{
-    transform: scale(1.1);
+#logout,#save {
+  transition: all 0.3s ease;
 }
 
-#head2{
-    font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+#logout{
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 25px;
+  backdrop-filter: blur(8px);
+  cursor:pointer;
+  font-size: 15px;
+  font-weight: 500;
+  position:absolute;
+  right:30px;
+  top:30px;
+}
+
+.div8{
+  margin:10px;
+  margin-left: 120px;
+  padding: 10px;
+  padding-right: 0px;
+}
+
+.div9{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.div10{
+  background: white;
+  border-radius: 8px;
+  padding: 10px 15px;
+  max-width: 650px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#p{
+  margin: 2px 0;
+}
+
+.div11{
+  display: flex;
+  gap:70px;
+  margin-bottom: 10px;
+}
+
+.div11 input{
+  width:120%;
+  height: 25px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.div13{
+  margin-bottom: 10px;
+}
+
+textarea{
+  border-radius: 5px;
+  height: 60px;
+  width: 500px;
+}
+
+#save{
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea{
+  width: 190px;
+  height: 100px;
+}
+
+.delete-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+
+@media (max-width: 900px) {
+  #header {
+    flex-direction: column;
+    height: auto;
+    padding: 5px;
+    align-items: left;
+  }
+  
+  #headx{
+    margin-right: 140px;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  #logout {
+    height: 40px;
+    position: static;
+    margin-top: 10px;
+    margin-left: 280px;
+    margin-bottom: 10px;
+  }
+
+  .div8 {
+    margin-left: 20px;
+    padding: 10px;
+  }
+
+  .div11 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .div11 input, textarea {
+    width: 75%;
+    font-size: 14px;
+    height: 35px;
+  }
+
+  textarea {
+    width: 77%;
+    height: 80px;
+  }
+
+  #save {
+    width: 78%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .div10 {
+    max-width: 70%;
+  }
+  
+  .div8 h2, .div8 h3 {
+    text-align: center;
+  }
 }

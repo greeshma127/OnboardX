@@ -8,7 +8,6 @@ function App() {
   const [user, setUser] = useState(null);
   const [allUsers, setAllUsers] = useState([]);
 
-  // login handler
   const handleLogin = async (formData) => {
     try {
       const res = await fetch("http://localhost:5000/api/login", {
@@ -28,21 +27,14 @@ function App() {
     }
   };
 
-  // registration success handler
   const handleRegistrationSuccess = (newUser) => {
     setUser(newUser);
   };
 
-  // logout handler
   const handleLogout = () => {
     setUser(null);
     setAllUsers([]);
   };
-
-  const handleUpdateUser = (updatedUser) => {
-  setUser(prev => ({ ...prev, ...updatedUser }));
-};
-
 
   return (
     <Router>

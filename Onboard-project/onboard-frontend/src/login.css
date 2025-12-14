@@ -2,16 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 #head{
-    font-family: "BBH Bartle", sans-serif;
+  font-family: "BBH Bartle", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
   display: inline-block;
-  padding: 5px 8px;          /* gives breathing space */
-  line-height: 1.2;          /* prevents top/bottom cut */
-  overflow: visible;         /* ensures no clipping */
+  padding: 5px 8px;          
+  line-height: 1.2;         
+  overflow: visible;         
   transition: transform 0.4s ease, letter-spacing 0.4s ease;
-  transform-origin: left center; /* grows to the right */
+  transform-origin: left center; 
+  margin: 0;
 }
 
 #head:hover {
@@ -21,16 +22,21 @@
 }
 
 #head2{
-    font-family: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 #btn {
-  transition: 
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+  width: 93.5%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 17px;
+  transition: transform 0.4s ease, letter-spacing 0.4s ease;
   cursor: pointer;
 }
 
@@ -46,32 +52,150 @@
 }
 
 #gradient {
+  width: 700px;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 input:hover{
-    cursor:text;
+  cursor:text;
 }
 
 #img{
-    transition: transform 0.4s ease, letter-spacing 0.4s ease;
+  width: 450px;
+  height: auto;
+  object-fit: contain;
+  margin: 120px;
+  transition: transform 0.4s ease, letter-spacing 0.4s ease;
 }
 
 #img:hover{
-    transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.div{
+  display:flex;
+  min-height: 100vh;
+}
+
+.div1{
+  flex:1;
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.div2{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div3,.div7{
+  max-width: 300px;
+  width: 97%;
+}
+
+.div3 input,.div7 input{
+  width: 90%;
+  height: 25px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border:1px solid gray;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#sign-up{
+  margin-top: 10px;
+}
+
+.div4{
+  display: flex;
+  min-height: 100vh;
+}
+
+.div5{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.div6{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div7{
+  max-width: 300px;
+  width: 50%;
+}
+
+@media (max-width: 900px) {
+  .div, .div4 {
+    align-items: left;
+    flex-direction: column; 
+  }
+
+  #gradient {
+    width: 100%;
+    height: 370px;
+    margin-bottom: 0px;
+    align-items: center;
+  }
+
+  #img {
+    width: 400px;
+    margin-left: 100px;
+    margin: 0;
+  }
+
+  .div1, .div5 {
+    padding: 5px;
+    align-items: left;
+  }
+
+  #head {
+    text-align: center;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  #head2 {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .div3, .div7 {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .div3 input, .div7 input {
+    width: 75%;
+    font-size: 14px;
+    height: 28px;
+  }
+
+  #btn {
+    width: 78%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #sign-up {
+    text-align: left;
+  }
 }
